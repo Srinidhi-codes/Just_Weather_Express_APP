@@ -17,6 +17,10 @@ const getInfo = async (event) => {
         try {
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=669a5ae1471994313e61a5317bf82518`
             const response = await fetch(url);
+            fetch('http://URL', {
+                // ...
+                referrerPolicy: "unsafe_url"
+            });
             const data = await response.json();
             const arrData = [data];
             city_name.innerText = `${arrData[0].name},${arrData[0].sys.country}`;
