@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Just Weather</title>
+</head>
+
+<body>
+    {{>navbar}}
+    <!-- main section -->
+
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row about">
+                    <!-- left side div -->
+                    <div class="col-md-8 col-12 main_header_left">
+                        <p>Welcome to Weather App</p>
+                        <h1>I'Am A <span class="wtxt"> <a href="/about">Mern Stack Developer</a></span> <br>&
+                            Freelancer.
+                        </h1>
+                        <a href="/about"><button>About Me</button></a>
+                    </div>
+                    <!-- right side div -->
+                    <div class="col-md-4 col-12 main_header_right rounded">
+                        <figure>
+                            <img src="images/about1.png" alt="about" class="img-fluid" title="Srii">
+                        </figure>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    {{>footer}}
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+<!--  -->

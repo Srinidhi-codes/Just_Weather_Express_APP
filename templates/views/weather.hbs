@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Just Weather</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    <!-- main section -->
+
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto my-auto">
+                <div class="main_content">
+                    <form class="temp_form">
+                        <input type="text" id="cityname" placeholder="Enter City Name" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                    </form>
+                </div>
+                <div class="tempInfo">
+                    <div class="top_layer">
+                        <p id="day"></p>
+                    </div>
+                    <div class="main_layer">
+                        <p id="city_name">Get Weather</p>
+                        <div class="middle_layer data_hide">
+                            <p id="temp"><span>0</span><sup>o</sup>C</p>
+                            <p id="temp_status"><i class="fa fa-brands fa-cloudflare fa-beat-fade"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- footer -->
+
+    {{>footer}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const day = document.getElementById('day')
+        const getCurrDay = () => {
+            let dates = new Date().toUTCString();
+            let currDate = dates.slice(0, 11);
+            let dd = day.innerText = currDate;
+        }
+        getCurrDay();
+    </script>
+</body>
+
+</html>
+
+
+<!--  -->
